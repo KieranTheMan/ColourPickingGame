@@ -22,10 +22,10 @@ for(let i = 0; i < squares.length; i++) {
         //get color of clicked square
         let clickedColor = this.style.background;
         let wrongColor = this.style.background = '#232323';
+        let correctMessage = messageDisplay.textContent = 'Correct';
         //compare color to picked color
-        clickedColor === pickedColor ? messageDisplay.textContent = 'Correct' &&
-        changeColors(clickedColor) :
-        messageDisplay.textContent = 'Try Again' && wrongColor;
+        clickedColor === pickedColor ? correctMessage && changeColors(clickedColor) :
+        messageDisplay.textContent = 'Try Again' || wrongColor;
     });
 }
 function changeColors(color) {
