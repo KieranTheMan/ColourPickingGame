@@ -28,4 +28,9 @@ for(let i = 0; i < squares.length; i++) {
         messageDisplay.textContent = 'Try Again' && wrongColor;
     });
 }
+function changeColors(color) {
+    for(let i = 0; i < squares.length; i++) {
+        squares[i].style.background = color;
+    }
+}
 
