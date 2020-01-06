@@ -20,10 +20,12 @@ for(let i = 0; i < squares.length; i++) {
     // click listener for squares
     squares[i].addEventListener('click', function() {
         //get color of clicked square
-        let clickedColor = this.style.background
+        let clickedColor = this.style.background;
+        let wrongColor = this.style.background = '#232323';
         //compare color to picked color
-        clickedColor === pickedColor ? messageDisplay.textContent = 'Correct' :
-        messageDisplay.textContent = 'Try Again'
-        this.style.background = '#232323'
+        clickedColor === pickedColor ? messageDisplay.textContent = 'Correct' &&
+        changeColors(clickedColor) :
+        messageDisplay.textContent = 'Try Again' && wrongColor;
     });
 }
+
