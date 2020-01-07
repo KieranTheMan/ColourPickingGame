@@ -8,11 +8,11 @@ const colors = [
 ]
 
 let squares = document.querySelectorAll('.square');
-let pickedColor = colors[3];
+let pickedWinColor = pickedColor();
 let colorDisplay = document.getElementById('colorDisplay')
 let messageDisplay = document.querySelector('#message')
 
-colorDisplay.textContent = pickedColor;
+colorDisplay.textContent = pickedWinColor;
 
 for(let i = 0; i < squares.length; i++) {
     //intial colors add to square
@@ -24,7 +24,7 @@ for(let i = 0; i < squares.length; i++) {
         let wrongColor = this.style.background = '#232323';
         let correctMessage = messageDisplay.textContent = 'Correct';
         //compare color to picked color
-        clickedColor === pickedColor ? correctMessage && changeColors(clickedColor) :
+        clickedColor === pickedWinColor ? correctMessage && changeColors(clickedColor) :
         messageDisplay.textContent = 'Try Again' || wrongColor;
     });
 }
@@ -32,5 +32,10 @@ function changeColors(color) {
     for(let i = 0; i < squares.length; i++) {
         squares[i].style.background = color;
     }
+}
+
+function pickedColor() {
+    let random = Math.floor(Math.random() * colors.length)
+    return colors[random]
 }
 
