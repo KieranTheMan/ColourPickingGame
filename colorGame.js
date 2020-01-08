@@ -12,6 +12,10 @@ easyBtn.addEventListener('click', function () {
     hardBtn.classList.remove('selected');
     easyBtn.classList.add('selected');
 })
+hardBtn.addEventListener('click', function () {
+    easyBtn.classList.remove('selected');
+    hardBtn.classList.add('selected');
+})
 
 resetButton.addEventListener('click', function() {
     colors =  generateRandomColors(6);
