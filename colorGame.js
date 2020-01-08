@@ -10,6 +10,7 @@ resetButton.addEventListener('click', function() {
     colors =  generateRandomColors(6);
     pickedWinColor = pickedColor();
     correctMessage = messageDisplay.textContent = '';
+    resetButton.textContent = 'New Colors'
     colorDisplay.textContent = pickedWinColor;
         for(i = 0; i < squares.length; i++ ) {
             squares[i].style.background = colors[i]
