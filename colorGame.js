@@ -5,8 +5,13 @@ let pickedWinColor = pickedColor();
 let colorDisplay = document.getElementById('colorDisplay');
 let messageDisplay = document.querySelector('#message');
 let resetButton = document.querySelector('#reset');
-let easyBtn = document.querySelector('#easyBtn')
-let hardBtn = document.querySelector('#hardBtn')
+let easyBtn = document.querySelector('#easyBtn');
+let hardBtn = document.querySelector('#hardBtn');
+
+easyBtn.addEventListener('click', function () {
+    hardBtn.classList.remove('selected');
+    easyBtn.classList.add('selected');
+})
 
 resetButton.addEventListener('click', function() {
     colors =  generateRandomColors(6);
