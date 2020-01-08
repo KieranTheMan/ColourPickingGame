@@ -40,3 +40,7 @@ h1 {
      height: 30px;
      text-align: center;
 }
+
+.selected {
+    background-color: blue;
+}

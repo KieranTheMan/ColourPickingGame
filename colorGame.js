@@ -5,6 +5,8 @@ let pickedWinColor = pickedColor();
 let colorDisplay = document.getElementById('colorDisplay');
 let messageDisplay = document.querySelector('#message');
 let resetButton = document.querySelector('#reset');
+let easyBtn = document.querySelector('#easyBtn')
+let hardBtn = document.querySelector('#hardBtn')
 
 resetButton.addEventListener('click', function() {
     colors =  generateRandomColors(6);
