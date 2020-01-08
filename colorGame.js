@@ -1,9 +1,19 @@
-const colors = generateRandomColors(6);
+let colors = generateRandomColors(6);
 
 let squares = document.querySelectorAll('.square');
 let pickedWinColor = pickedColor();
-let colorDisplay = document.getElementById('colorDisplay')
-let messageDisplay = document.querySelector('#message')
+let colorDisplay = document.getElementById('colorDisplay');
+let messageDisplay = document.querySelector('#message');
+let resetButton = document.querySelector('#reset');
+
+resetButton.addEventListener('click', function() {
+    colors =  generateRandomColors(6);
+    pickedWinColor = pickedColor();
+    colorDisplay.textContent = pickedWinColor;
+        for(i = 0; i < squares.length; i++ ) {
+            squares[i].style.background = colors[i]
+        }
+})
 
 colorDisplay.textContent = pickedWinColor;
 
