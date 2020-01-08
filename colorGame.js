@@ -9,11 +9,12 @@ let resetButton = document.querySelector('#reset');
 resetButton.addEventListener('click', function() {
     colors =  generateRandomColors(6);
     pickedWinColor = pickedColor();
+    correctMessage = messageDisplay.textContent = '';
     colorDisplay.textContent = pickedWinColor;
         for(i = 0; i < squares.length; i++ ) {
             squares[i].style.background = colors[i]
         }
-})
+});
 
 colorDisplay.textContent = pickedWinColor;
 
@@ -25,10 +26,15 @@ for(let i = 0; i < squares.length; i++) {
         //get color of clicked square
         let clickedColor = this.style.background;
         let wrongColor = this.style.background = '#232323';
-        let correctMessage = messageDisplay.textContent = 'Correct';
         //compare color to picked color
-        clickedColor === pickedWinColor ? correctMessage && changeColors(clickedColor) :
-        messageDisplay.textContent = 'Try Again' || wrongColor;
+        if(clickedColor === pickedWinColor) {
+            correctMessage = messageDisplay.textContent = 'Correct';
+            resetButton.textContent = 'Play Again ?';
+            changeColors(clickedColor);
+        } else {
+            messageDisplay.textContent = 'Try Again';
+            wrongColor;
+        }
     });
 }
 function changeColors(color) {
