@@ -1,4 +1,5 @@
-let colors = generateRandomColors(6);
+let numSquares = 6
+let colors = generateRandomColors(numSquares);
 let squares = document.querySelectorAll('.square');
 let pickedWinColor = pickedColor();
 let colorDisplay = document.getElementById('colorDisplay');
@@ -6,11 +7,14 @@ let messageDisplay = document.querySelector('#message');
 let resetButton = document.querySelector('#reset');
 let easyBtn = document.querySelector('#easyBtn');
 let hardBtn = document.querySelector('#hardBtn');
+//verabel to keep track of easy or hard mode so when play agin is clicked
+//it what produce the wrogn number of squares
 
 easyBtn.addEventListener('click', function () {
     hardBtn.classList.remove('selected');
     easyBtn.classList.add('selected');
-    colors = generateRandomColors(3);
+    numSquares = 3
+    colors = generateRandomColors(numSquares);
     pickedWinColor = pickedColor();
     colorDisplay.textContent = pickedWinColor;
     for(let i = 0; i < squares.length; i++) {
@@ -21,17 +25,18 @@ easyBtn.addEventListener('click', function () {
 hardBtn.addEventListener('click', function() {
     easyBtn.classList.remove('selected');
     hardBtn.classList.add('selected');
-    colors = generateRandomColors(6);
+    numSquares = 6;
+    colors = generateRandomColors(numSquares);
     pickedWinColor = pickedColor();
     colorDisplay.textContent = pickedWinColor;
     for(let i = 0; i < squares.length; i++) {
         squares[i].style.background = colors[i]
         squares[i].style.display = 'block'
     }
-})
+});
 
 resetButton.addEventListener('click', function() {
-    colors =  generateRandomColors(6);
+    colors =  generateRandomColors(numSquares);
     pickedWinColor = pickedColor();
     correctMessage = messageDisplay.textContent = '';
     resetButton.textContent = 'New Colors'
