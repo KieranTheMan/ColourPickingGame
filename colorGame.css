@@ -41,6 +41,26 @@ h1 {
      text-align: center;
 }
 
+#colorDisplay {
+    font-size: 200%;
+}
+
 .selected {
     background-color: blue;
+}
+
+button {
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    height: 100%;
+    font-weight: 700;
+    color: steelblue;
+    letter-spacing: 1px;
+    font-size: inherit;
+}
+
+#message {
+    display: inline-block;
+    width: 20%;
 }

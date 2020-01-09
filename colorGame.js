@@ -7,8 +7,6 @@ let messageDisplay = document.querySelector('#message');
 let resetButton = document.querySelector('#reset');
 let easyBtn = document.querySelector('#easyBtn');
 let hardBtn = document.querySelector('#hardBtn');
-//verabel to keep track of easy or hard mode so when play agin is clicked
-//it what produce the wrogn number of squares
 
 easyBtn.addEventListener('click', function () {
     hardBtn.classList.remove('selected');
