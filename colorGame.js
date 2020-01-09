@@ -7,6 +7,7 @@ let messageDisplay = document.querySelector('#message');
 let resetButton = document.querySelector('#reset');
 let easyBtn = document.querySelector('#easyBtn');
 let hardBtn = document.querySelector('#hardBtn');
+let h1 = document.querySelector('h1');
 
 easyBtn.addEventListener('click', function () {
     hardBtn.classList.remove('selected');
@@ -42,6 +43,7 @@ resetButton.addEventListener('click', function() {
         for(i = 0; i < squares.length; i++ ) {
             squares[i].style.background = colors[i]
         }
+    h1.style.background = 'steelblue';
 });
 
 colorDisplay.textContent = pickedWinColor;
@@ -58,6 +60,7 @@ for(let i = 0; i < squares.length; i++) {
         if(clickedColor === pickedWinColor) {
             correctMessage = messageDisplay.textContent = 'Correct';
             resetButton.textContent = 'Play Again ?';
+            h1.style.background = pickedWinColor;
             changeColors(clickedColor);
         } else {
             messageDisplay.textContent = 'Try Again';

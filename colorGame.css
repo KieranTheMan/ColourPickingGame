@@ -46,7 +46,8 @@ h1 {
 }
 
 .selected {
-    background-color: blue;
+    background-color: steelblue;
+    color: white;
 }
 
 button {
