@@ -18,7 +18,7 @@ easyBtn.addEventListener('click', function () {
         : squares[i].style.display = 'none'
     }
 });
-hardBtn.addEventListener('click', function () {
+hardBtn.addEventListener('click', function() {
     easyBtn.classList.remove('selected');
     hardBtn.classList.add('selected');
     colors = generateRandomColors(6);
