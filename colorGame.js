@@ -27,8 +27,8 @@ function reset() {
             squares[i].style.background = colors[i]
         }
     h1.style.background = 'steelblue';
-});
-}
+};
+
 // easyBtn.addEventListener('click', function () {
 //     hardBtn.classList.remove('selected');
 //     easyBtn.classList.add('selected');
