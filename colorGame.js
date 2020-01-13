@@ -1,5 +1,5 @@
 let numSquares = 6
-let colors = generateRandomColors(numSquares);
+let colors = [];//reset generates colors
 let squares = document.querySelectorAll('.square');
 let pickedWinColor = pickedColor();
 let colorDisplay = document.getElementById('colorDisplay');
