@@ -1,7 +1,7 @@
 let numSquares = 6
-let colors = [];//reset generates colors
-let squares = document.querySelectorAll('.square');
+let colors = [];//reset function generates colors
 let pickedWinColor = pickedColor();
+let squares = document.querySelectorAll('.square');
 let colorDisplay = document.getElementById('colorDisplay');
 let messageDisplay = document.querySelector('#message');
 let resetButton = document.querySelector('#reset');
@@ -13,9 +13,11 @@ function init() {
     setupModeButtons();
     setupSquares();
     reset();
-}
+};
+
 function setupModeButtons() {
     for(let i = 0; i < modeButtons.length; i++) {
+        modeButtons[1].classList.add('selected');
         modeButtons[i].addEventListener('click', function(){
             modeButtons[0].classList.remove('selected');
             modeButtons[1].classList.remove('selected');
@@ -24,7 +26,8 @@ function setupModeButtons() {
             reset();
         });
     }
-}
+};
+
 function setupSquares() {
     for(let i = 0; i < squares.length; i++) {
         // click listener for squares
@@ -44,7 +47,7 @@ function setupSquares() {
             }
         });
     }
-}
+};
 
 function reset() {
     colors =  generateRandomColors(numSquares);
@@ -71,12 +74,12 @@ function changeColors(color) {
     for(let i = 0; i < squares.length; i++) {
         squares[i].style.background = color;
     }
-}
+};
 
 function pickedColor() {
     let random = Math.floor(Math.random() * colors.length)
     return colors[random]
-}
+};
 
 function generateRandomColors(num) {
     let arr = [];
@@ -84,15 +87,12 @@ function generateRandomColors(num) {
         arr.push(randomColor())
     }
     return arr;
-}
+};
 
 function randomColor() {
-//pick a red from 0 - 255
-let r = Math.floor(Math.random() * 256);
-//pick a green from 0 - 255
-let g = Math.floor(Math.random() * 256);
-//pick a blue from 0 - 255
-let b = Math.floor(Math.random() * 256);
+    let r = Math.floor(Math.random() * 256);
+    let g = Math.floor(Math.random() * 256);
+    let b = Math.floor(Math.random() * 256);
 
-return "rgb("+ r + ", " + g + ", " + b + ")"
-}
+    return "rgb("+ r + ", " + g + ", " + b + ")"
+};
