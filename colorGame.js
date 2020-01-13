@@ -11,6 +11,7 @@ let h1 = document.querySelector('h1');
 init();
 
 function init() {
+    //modeButtons event listener
     for(let i = 0; i < modeButtons.length; i++) {
         modeButtons[i].addEventListener('click', function(){
             modeButtons[0].classList.remove('selected');
@@ -20,6 +21,25 @@ function init() {
             reset();
         });
     }
+    for(let i = 0; i < squares.length; i++) {
+        // click listener for squares
+        squares[i].addEventListener('click', function() {
+            //get color of clicked square
+            let clickedColor = this.style.background;
+            let wrongColor = this.style.background = '#232323';
+            //compare color to picked color
+            if(clickedColor === pickedWinColor) {
+                correctMessage = messageDisplay.textContent = 'Correct';
+                resetButton.textContent = 'Play Again ?';
+                h1.style.background = pickedWinColor;
+                changeColors(clickedColor);
+            } else {
+                messageDisplay.textContent = 'Try Again';
+                wrongColor;
+            }
+        });
+    }
+    reset();
 }
 
 
@@ -46,24 +66,6 @@ resetButton.addEventListener('click', function() {
 
 colorDisplay.textContent = pickedWinColor;
 
-for(let i = 0; i < squares.length; i++) {
-    // click listener for squares
-    squares[i].addEventListener('click', function() {
-        //get color of clicked square
-        let clickedColor = this.style.background;
-        let wrongColor = this.style.background = '#232323';
-        //compare color to picked color
-        if(clickedColor === pickedWinColor) {
-            correctMessage = messageDisplay.textContent = 'Correct';
-            resetButton.textContent = 'Play Again ?';
-            h1.style.background = pickedWinColor;
-            changeColors(clickedColor);
-        } else {
-            messageDisplay.textContent = 'Try Again';
-            wrongColor;
-        }
-    });
-}
 function changeColors(color) {
     for(let i = 0; i < squares.length; i++) {
         squares[i].style.background = color;
