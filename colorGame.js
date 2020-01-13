@@ -25,7 +25,7 @@ function reset() {
     resetButton.textContent = 'New Colors';
     messageDisplay.textContent = '';
         for(i = 0; i < squares.length; i++) {
-            if(colors[i]) {
+            if(colors[i]) {//if their is a color to paint
                 squares[i].style.display = 'block';
                 squares[i].style.background = colors[i];
             } else {
@@ -35,42 +35,9 @@ function reset() {
         h1.style.background = 'steelblue';
 };
 
-// easyBtn.addEventListener('click', function () {
-//     hardBtn.classList.remove('selected');
-//     easyBtn.classList.add('selected');
-//     numSquares = 3
-//     colors = generateRandomColors(numSquares);
-//     pickedWinColor = pickedColor();
-//     colorDisplay.textContent = pickedWinColor;
-//     for(let i = 0; i < squares.length; i++) {
-//         colors[i] ? squares[i].style.background = colors[i]
-//         : squares[i].style.display = 'none'
-//     }
-// });
-// hardBtn.addEventListener('click', function() {
-//     easyBtn.classList.remove('selected');
-//     hardBtn.classList.add('selected');
-//     numSquares = 6;
-//     colors = generateRandomColors(numSquares);
-//     pickedWinColor = pickedColor();
-//     colorDisplay.textContent = pickedWinColor;
-//     for(let i = 0; i < squares.length; i++) {
-//         squares[i].style.background = colors[i]
-//         squares[i].style.display = 'block'
-//     }
-// });
-
-// resetButton.addEventListener('click', function() {
-//     colors =  generateRandomColors(numSquares);
-//     pickedWinColor = pickedColor();
-//     correctMessage = messageDisplay.textContent = '';
-//     resetButton.textContent = 'New Colors'
-//     colorDisplay.textContent = pickedWinColor;
-//         for(i = 0; i < squares.length; i++ ) {
-//             squares[i].style.background = colors[i]
-//         }
-//     h1.style.background = 'steelblue';
-// });
+resetButton.addEventListener('click', function() {
+    reset();
+});
 
 colorDisplay.textContent = pickedWinColor;
 
