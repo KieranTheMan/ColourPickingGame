@@ -9,9 +9,12 @@ let modeButtons = document.querySelectorAll('.mode');
 let h1 = document.querySelector('h1');
 
 init();
-
 function init() {
-    //modeButtons event listener
+    setupModeButtons();
+    setupSquares();
+    reset();
+}
+function setupModeButtons() {
     for(let i = 0; i < modeButtons.length; i++) {
         modeButtons[i].addEventListener('click', function(){
             modeButtons[0].classList.remove('selected');
@@ -21,6 +24,8 @@ function init() {
             reset();
         });
     }
+}
+function setupSquares() {
     for(let i = 0; i < squares.length; i++) {
         // click listener for squares
         squares[i].addEventListener('click', function() {
@@ -39,9 +44,7 @@ function init() {
             }
         });
     }
-    reset();
 }
-
 
 function reset() {
     colors =  generateRandomColors(numSquares);
@@ -63,8 +66,6 @@ function reset() {
 resetButton.addEventListener('click', function() {
     reset();
 });
-
-colorDisplay.textContent = pickedWinColor;
 
 function changeColors(color) {
     for(let i = 0; i < squares.length; i++) {
