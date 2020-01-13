@@ -5,10 +5,14 @@ let pickedWinColor = pickedColor();
 let colorDisplay = document.getElementById('colorDisplay');
 let messageDisplay = document.querySelector('#message');
 let resetButton = document.querySelector('#reset');
-let easyBtn = document.querySelector('#easyBtn');
-let hardBtn = document.querySelector('#hardBtn');
+let modeButtons = document.querySelectorAll('.mode');
 let h1 = document.querySelector('h1');
 
+for(let i = 0; i < modeButtons.length; i++) {
+    modeButtons[i].addEventListener('click', function(){
+        
+    })
+}
 easyBtn.addEventListener('click', function () {
     hardBtn.classList.remove('selected');
     easyBtn.classList.add('selected');
