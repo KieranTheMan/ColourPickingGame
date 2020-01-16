@@ -1,10 +1,10 @@
 # ColourPickingGame
-
+https://kierantheman.github.io/ColourPickingGame/
 ## Task
-To build a colour game using HTML5, CSS3 and vanilla JavaScript ES6+.
+To build a colour game using <b>HTML5</b>, <b>CSS3</b> and vanilla <b>JavaScript ES6+</b>.
 
 ## Summary
-I chose to develop a simple color game, to improve my knowledge of JavaScript also understanding of Higher order functions and Dom manipulation. The main focus was to exercise and advance my current knowledge on Javascript.
+I chose to develop a simple color game, to improve my knowledge of JavaScript also understanding of Higher order functions and Dom manipulation. The main focus was to exercise and advance my current knowledge on <b>Javascript</b>.
 
 ## Functionality
 <ul>
