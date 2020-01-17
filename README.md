@@ -1,10 +1,10 @@
 # ColourPickingGame
-
+https://kierantheman.github.io/ColourPickingGame/
 ## Task
 To build a colour game using HTML5, CSS3 and vanilla JavaScript ES6+.
 
 ## Summary
-I chose to develop a simple color game, to improve my knowledge of JavaScript also understanding of Higher order functions and Dom manipulation. The main focus was to exercise and advance my current knowledge on Javascript.
+I chose to develop a simple color game, to improve my knowledge of JavaScript also understanding of Higher order functions and Dom manipulation. The main focus was to exercise and advance my current knowledge of Javascript.
 
 ## Functionality
 <ul>
@@ -12,7 +12,7 @@ I chose to develop a simple color game, to improve my knowledge of JavaScript al
 
    <li>The user has a choice of selecting a difficulty level of easy or hard.  Hard displays six coloured squares to select from and easy has three colored squares, automaticaly hiding the remaining three.</li>
 
-   <li>There is also an algorithm that randomizes the squares colors on every new game played and the winning color that must be chosen to win. This event occurs when the ‘new colors’ button or difficulty level has been selected.</li>
+   <li>There is also an algorithm that randomizes the squares colours on every new game played and the winning colour that must be chosen to win. This event occurs when the ‘new colors’ button or difficulty level has been selected.</li>
 
    <li>If the user selects the wrong colour, a small message is displayed to let them know to 'try again' also the selected colour is automatically coloured grey.</li>
 </ul>
